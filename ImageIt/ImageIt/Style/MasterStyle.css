@@ -1,0 +1,23 @@
+﻿body {
+    margin-bottom:10px;
+    margin-top:10px;
+    margin-left:50px;
+    margin-right:50px;
+}
+/*specific style for mean menu items, home, posts, about*/
+a.menuItem{
+    margin-right:15px;
+
+}
+#signin{
+    float:right;
+    color:white;
+}
+/*specific for signin and menu to apear on same line.*/
+#signin, #menu{
+    display:inline;
+}
+#header{
+    background-color:olive;
+}
+
