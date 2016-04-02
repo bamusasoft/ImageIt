@@ -14,8 +14,7 @@ if($result){
         session_regenerate_id();
         $member = mysql_fetch_assoc($result);
         $_SESSION['SESS_MEMBER_ID'] = $member['id'];
-        $_SESSION['SESS_FIRST_NAME']= $member['UserName'];
-        $_SESSION['SESS_LAST_NAME'] = $member['Password'];
+        $_SESSION['SESS_USER']= $member['UserName'];
         session_write_close();
         header("location: ../home.php");
         exit();
