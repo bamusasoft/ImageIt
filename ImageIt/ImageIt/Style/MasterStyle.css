@@ -20,8 +20,20 @@ a.menuItem{
 #header{
     background-color:olive;
 }
-#content{
-    margin-top:100px;
+
+
+#L1{
+    padding-top: 50px;
+    padding-left: 100px
+
+}
+
+#L2{
+    padding-left: 65px;
+}
+
+#I3{
+   margin-left:152px;
 }
 
 

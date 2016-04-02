@@ -18,14 +18,15 @@
             <a href="SignIn.php">Sign In </a>
         </div>
     </div>
+    <br/>
     <div id="content">
-       <form method="post" action="../Php/PostImage.php" enctype="multipart/form-data">
-           <label title="subject">Subject</label>
-           <input type="text" name="subject" /><br />
-           <label title="image">Select Image</label>
-           <input type="file" name="imageToUpload" id="imageToUpload"/> <br />
-           <input type="submit" value="Upload Image" name="submit" />
-       </form>
+        <form method="post" action="../Php/PostImage.php" enctype="multipart/form-data">
+            <label id="L1" title="subject">Subject</label>
+            <input id="I1" type="text" name="subject" /><br />
+            <label id="L2" title="image">Select Image</label>
+            <input id="I2" type="file" name="imageToUpload" id="imageToUpload" /> <br />
+            <input id="I3" type="submit" value="Upload Image" name="submit" />
+        </form>
         
     </div>
     <div id="latestposts">
