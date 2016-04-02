@@ -25,12 +25,14 @@
     <Folder Include="Php\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Home.php" />
+    <Content Include="home.php" />
     <Content Include="Logo\Logo.jpg" />
     <Content Include="Style\MasterStyle.css" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Php\PostImage.php" />
-    <Compile Include="Php\User.php" />
+    <Compile Include="Php\connection.php" />
+    <Compile Include="Php\login.php" />
+    <Compile Include="Php\postimage.php" />
+    <Compile Include="Php\user.php" />
   </ItemGroup>
 </Project>

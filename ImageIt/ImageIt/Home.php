@@ -10,24 +10,27 @@
     </div>
     <div id="header">
         <div id="menu">
-            <a class="menuItem" href="Home.php">Home</a>
-            <a class="menuItem" href="Posts.php">Posts</a>
-            <a class="menuItem" href="About.php">About</a>
+            <a class="menuItem" href="home.php">Home</a>
+            <a class="menuItem" href="posts.php">Posts</a>
+            <a class="menuItem" href="about.php">About</a>
         </div>
         <div id="signin">
-            <a href="SignIn.php">Sign In </a>
+            <a href="../Php/Login.php">Sign In </a>
         </div>
     </div>
+
     <div id="content">
-       <form method="post" action="../Php/PostImage.php" enctype="multipart/form-data">
+       <form method="post" action="../Php/postimage.php" enctype="multipart/form-data">
            <label title="subject">Subject</label>
            <input type="text" name="subject" /><br />
            <label title="image">Select Image</label>
            <input type="file" name="imageToUpload" id="imageToUpload"/> <br />
            <input type="submit" value="Upload Image" name="submit" />
+           s
        </form>
     </div>
-    <div id="latestposts">
+    
+    <div id="latestPosts">
         
     </div>
 </body>

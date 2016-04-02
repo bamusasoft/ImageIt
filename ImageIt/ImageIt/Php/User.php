@@ -1,51 +1,32 @@
 <?php
+session_start();
+require_once('connection.php');
+$errmsg_arr = array();
+$errFlag = false;
+$userName = $_POST['username'];
+$password = $_POST['password'];
 
-/**
- * User short summary.
- *
- * User description.
- *
- * @version 1.0
- * @author Abdullah
- */
-class User
+$query =  "SELECT * FROM users where UserName = '$userName' AND Password = '$password'" ;
+$result = mysql_query($query);
+if($result){
+    if (mysql_num_rows($result) > 0)
+    {
+        session_regenerate_id();
+        $member = mysql_fetch_assoc($result);
+        $_SESSION['SESS_MEMBER_ID'] = $member['id'];
+        $_SESSION['SESS_FIRST_NAME']= $member['UserName'];
+        $_SESSION['SESS_LAST_NAME'] = $member['Password'];
+        session_write_close();
+        header("location: ../home.php");
+        exit();
+    }
+    
+    }
+else
 {
-    private $_id;
-    private $_name;
-    private $_email;
-    private $_password;
-    public function getId()
-    {
-        return $this->_id;
-    }
-    public function setId($value)
-    {
-        $this->_id =$value;
-    }
-    public function getName()
-    {
-        return $this->_name;
-    }
-    public function setName($value)
-    {
-        $this->_name =$value;
-    }
-    public function getEmail()
-    {
-       return $this->_email;
-    }
-    public function setEmail($value)
-    {
-        $this->_email =$value;
-    }
-    public function getPassword()
-    {
-        return  $this->_password;
-    }
-    public function setPassword($value)
-    {
-        $this->_password =$value;
-    }
-
-
+    die("Query failed");
 }
+
+
+
+?>

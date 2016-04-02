@@ -20,4 +20,8 @@ a.menuItem{
 #header{
     background-color:olive;
 }
+#latestPosts{
+    margin-top:50px;
+    border-top:1px solid #808080
+}
 
