@@ -26,6 +26,7 @@
            <input type="file" name="imageToUpload" id="imageToUpload"/> <br />
            <input type="submit" value="Upload Image" name="submit" />
        </form>
+        test
     </div>
     <div id="latestposts">
         
