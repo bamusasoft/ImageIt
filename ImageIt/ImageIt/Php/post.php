@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Post</title>
@@ -41,12 +41,10 @@
                         <p> <?php $comment["Comment"]?></p>
                         <?php
                             }
-                        ?>
-                
-
                 }
-        }
-    
+            }
+        ?>
+    <form method="post" action=""
 
 </body>
 </html>

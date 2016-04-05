@@ -21,6 +21,7 @@
   <ItemGroup>
     <Folder Include="Logo\" />
     <Folder Include="Images\" />
+    <Folder Include="Scripts\" />
     <Folder Include="Style\" />
     <Folder Include="Php\" />
   </ItemGroup>
@@ -31,6 +32,7 @@
     <Content Include="Style\MasterStyle.css" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Php\addcomment.php" />
     <Compile Include="Php\connection.php" />
     <Compile Include="Php\login.php" />
     <Compile Include="Php\postimage.php" />
