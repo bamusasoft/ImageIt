@@ -6,12 +6,13 @@
 </head>
 <body>
     <?php
-    $postId= $_Get["Id"];
-    if(!isset($postID))
+    
+    $postId= (int) $_GET["id"];
+    if(!isset($postId))
         {
             exit();
         }
-    $query = "Select * from posts where Id = '$postId'";
+    $query = "Select * from posts where Id = $postId";
     require_once('connection.php');
     $result = mysql_query($query);
     if($result)
@@ -19,20 +20,22 @@
             if(mysql_num_rows($result) > 0)
                 {
                     $post = mysql_fetch_assoc($result);
-                    $postId= $post["Id"];
+                    $postId= (int) $post["Id"];
                     $postComments = null;
                     if(isset($postId))
                        {
-                         $selectComment = "Select * from Comments Where PostId = '$postId'";
-                         $commentsResult = mysql_query($query);
+                         $selectComment = "Select * from comments Where PostId = $postId";
+                         $commentsResult = mysql_query($selectComment);
                          $postComments = mysql_fetch_assoc($commentsResult);
 
                          
                         }
                     $imageUrl = $post["ImageUrl"];
-                    $title = $post["Title"] ?>
-                    <img src = "<?php $imageUrl; ?> width = "75" height = "75" > 
-                    <h3><?php $title ?> </h3>
+                    $title = $post["Title"]
+                      ?>
+                    <img src = "<?php echo $imageUrl ?>" width = "250" height = "150" > 
+                    <h3> <?php echo $title ?> </h3>
+                    <span>Comments</span>
                     <?php 
                         foreach($postComments as $comment)
                             {
@@ -44,7 +47,12 @@
                 }
             }
         ?>
-    <form method="post" action=""
+    <form method="post" action="addcomment.php">
+        <input type="hidden" name="postId" value="<?php echo $postId?>" />
+        <textarea rows="4" cols="50" name="comment" id="comment">
+        </textarea>
+        <input type="submit" name="submit" value="Add" />
+    </form>
 
 </body>
 </html>

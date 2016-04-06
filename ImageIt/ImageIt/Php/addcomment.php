@@ -1,5 +1,5 @@
 <?php
-$postId = $_GET["postId"];
+$postId = (int) $_POST["postId"];
 
 if(!isset($postId))
 {
@@ -8,9 +8,10 @@ if(!isset($postId))
 
 }
 require_once("connection.php");
-$comment = $_GET["comment"];
-$createdAt= date("Y-m-d");
-$insertComment = "Insert into comments values('$postId', $comment, $createdAt)";
+$comment = $_POST["comment"];
+$createdAt= date("Y-m-d H:i:s");
+$insertComment = "Insert into comments values($postId, $comment, $createdAt)";
+
 mysql_query($insertComment);
-header("location: ../php/post.php")
+header("location: post.php?id = " .$postId);
 ?>

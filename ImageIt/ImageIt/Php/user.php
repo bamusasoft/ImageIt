@@ -13,7 +13,7 @@ if($result){
     {
         session_regenerate_id();
         $member = mysql_fetch_assoc($result);
-        $_SESSION['SESS_MEMBER_ID'] = $member['id'];
+        $_SESSION['SESS_MEMBER_ID'] = $member['Id'];
         $_SESSION['SESS_USER']= $member['UserName'];
         session_write_close();
         header("location: ../home.php");
