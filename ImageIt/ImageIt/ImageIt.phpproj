@@ -36,6 +36,8 @@
     <Compile Include="Php\connection.php" />
     <Compile Include="Php\login.php" />
     <Compile Include="Php\postimage.php" />
+    <Compile Include="Php\registeruser.php" />
+    <Compile Include="Php\registration.php" />
     <Compile Include="Php\user.php" />
   </ItemGroup>
 </Project>

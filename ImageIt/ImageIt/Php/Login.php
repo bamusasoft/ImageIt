@@ -13,7 +13,7 @@
             Password <br />
             <input type="password" name="password" size="40" /><br />
             <input id="button" type="submit" name="submit" value="Sign in" />
-            New? <a href="Register.php">Register</a>
+            New? <a href="registration.php">Register</a>
         </form>
     </fieldset>
 </body>
