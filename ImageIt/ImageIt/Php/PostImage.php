@@ -20,14 +20,14 @@ if (isset($_POST["submit"]))
            $userId= (int) $_SESSION['SESS_MEMBER_ID'];
            $createdAt = (string) date("Y-m-d H:i:s");
            $insertPost = "INSERT INTO posts (Title, ImageUrl, CreatedAt, UserId) Values('$title', '$target_file', '$createdAt', $userId)";
-           $result = mysql_query($insertPost);
+           $result = mysqli_query($connection, $insertPost);
           
            //if(!$result) //For debug purpose
           //{
           //   $er = mysql_error($connection);
 
           //}
-           $postId = mysql_insert_id();
+           $postId = mysqli_insert_id($connection);
            header("location: post.php?id=" . $postId );
            exit();
 

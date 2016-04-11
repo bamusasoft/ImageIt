@@ -12,21 +12,25 @@
         {
             exit();
         }
-    $query = "Select * from posts where Id = $postId";
     require_once('connection.php');
-    $result = mysql_query($query);
+    $query = "Select * from posts where Id = $postId";
+    $result = mysqli_query($connection, $query);
+    if(!$result)
+    {
+        die(mysqli_error($connection));
+    }
     if($result)
         {
-            if(mysql_num_rows($result) > 0)
+            if(mysqli_num_rows($result) > 0)
                 {
-                    $post = mysql_fetch_assoc($result);
+                    $post = mysqli_fetch_assoc($result);
                     $postId= (int) $post["Id"];
                     $postComments = null;
                     if(isset($postId))
                        {
                          $selectComment = "Select * from comments Where PostId = $postId";
-                         $commentsResult = mysql_query($selectComment);
-                         $postComments = mysql_fetch_assoc($commentsResult);
+                         $commentsResult = mysqli_query($connection, $selectComment);
+                         $postComments = mysqli_fetch_assoc($commentsResult);
 
                          
                         }

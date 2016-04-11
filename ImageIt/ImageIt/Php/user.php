@@ -1,29 +1,31 @@
 <?php
-session_start();
 require_once('connection.php');
 $errmsg_arr = array();
 $errFlag = false;
 $userName = $_POST['username'];
 $password = $_POST['password'];
-
-$query =  "SELECT * FROM users where UserName = '$userName' AND Password = '$password'" ;
-$result = mysql_query($query);
-if($result){
-    if (mysql_num_rows($result) > 0)
-    {
+$query =  "SELECT * FROM users where UserName = ? AND Password = ?" ;
+$stmt = mysqli_prepare($connection, $query);
+mysqli_stmt_bind_param($stmt, "ss", $userName, $password);
+mysqli_stmt_execute($stmt);
+$result = mysqli_stmt_get_result($stmt);
+$usersArray = mysqli_fetch_array($result,MYSQL_ASSOC);
+$resultCount = count($usersArray);
+if($resultCount > 0)
+{
+        session_start();
         session_regenerate_id();
-        $member = mysql_fetch_assoc($result);
-        $_SESSION['SESS_MEMBER_ID'] = $member['Id'];
-        $_SESSION['SESS_USER']= $member['UserName'];
+        $_SESSION['SESS_MEMBER_ID'] = $usersArray["Id"];
+        $_SESSION['SESS_USER']= $usersArray["UserName"];
         session_write_close();
         header("location: ../home.php");
         exit();
-    }
-    
-    }
+}
+
 else
 {
-    die("Query failed");
+    header("location: login.php?msg=failed");
+    exit();
 }
 
 

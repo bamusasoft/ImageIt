@@ -16,5 +16,12 @@
             New? <a href="registration.php">Register</a>
         </form>
     </fieldset>
+    <?php
+    if(isset($_GET["msg"]) && $_GET["msg"] == 'failed')
+        {
+            echo "User name or password is wrong";
+        }
+        
+        ?>
 </body>
 </html>
