@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php include("header.php") ?>
-    <fieldset style="width:30%"> <legend>Sign in</legend>
+    <fieldset class="maincontent" style="width:30%"> <legend>Sign in</legend>
         <form method="post" action="user.php">
             User name <br />
             <input type="text" name="username" size="40" /><br />

@@ -10,26 +10,24 @@
     session_start();
     $user = $_SESSION['SESS_USER'];
     ?>
-    <div id="logo">
-        <img src="../logo/logo.jpg" alt="Image It" width="75" height="50" />
+    <div>
+        <img src="../logo/logo.png" alt="Image It" width="75" height="80" />
     </div>
-    <div id="header">
-        <div id="menu">
+    <div id="menu">
             <a class="menuItem" href="../home.php">Home</a>
             <a class="menuItem" href="../php/allposts.php">Posts</a>
             <a class="menuItem" href="about.php">About</a>
-        </div>
         <?php
         if(!isset($user))
         {
-            echo '<div id="signin">
+            echo '<div class="signin">
                     <a href="../Php/Login.php">Sign In </a>
                     </div>
                     ';
         }
         else
         {
-            echo '<div id="signin">
+            echo '<div class="signin">
                     <a href="../Php/logout.php">log out </a>
                  </div>
                     ';

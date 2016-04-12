@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Post</title>
+    <title>Posts</title>
     <link rel="stylesheet" type="text/css" href="../Style/MasterStyle.css" />
 </head>
 <body>
     <?php
     include("header.php");
-    require_once('connection.php');
-    $query = "Select * from posts";
-    $result = mysqli_query($connection, $query);
-    if(!$result)
-    {
-        die(mysqli_error($connection));
-    }
     ?>
+    <div class="maincontent">
+        <?php
+        require_once('connection.php');
+        $query = "Select * from posts";
+        $result = mysqli_query($connection, $query);
+        if(!$result)
+        {
+            die(mysqli_error($connection));
+        }
+        ?>
 
-    <?php
-            while($row = mysqli_fetch_assoc($result))
-            {
-    ?>
+        <?php
+        while($row = mysqli_fetch_assoc($result))
+        {
+        ?>
 
         <img src="<?php echo $row["ImageUrl"]; ?>" width="75" height="80" />
         <br />
@@ -27,10 +30,10 @@
             <?php echo $row["Title"]; ?>
         </a>
         <hr />
-    <?php
-            }
-    mysqli_close($connection);
-    ?>
-    
+        <?php
+        }
+        mysqli_close($connection);
+        ?>
+    </div>
 </body>
 </html>

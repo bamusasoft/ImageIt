@@ -7,11 +7,15 @@
 <body>
     <?php
     include("header.php");
+        ?>
+    <div class="maincontent">
+    <?php 
     $postId= (int) $_GET["id"];
     if(!isset($postId))
         {
             exit();
         }
+
     require_once('connection.php');
     $query = "Select * from posts where Id = $postId";
     $result = mysqli_query($connection, $query);
@@ -51,12 +55,13 @@
             }
         ?>
     <?php mysqli_close($connection); ?>
+
     <form method="post" action="addcomment.php">
         <input type="hidden" name="postId" value="<?php echo $postId?>" />
         <textarea rows="4" cols="50" name="comment" id="comment">
         </textarea>
         <input type="submit" name="submit" value="Add" />
     </form>
-
+    </div>
 </body>
 </html>

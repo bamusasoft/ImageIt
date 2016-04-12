@@ -6,7 +6,8 @@
     <link rel="stylesheet" type="text/css" href="../Style/MasterStyle.css" />
 </head>
 <body>
-    <fieldset style="width:30%">
+
+    <fieldset class="maintcontent" style="width:30%">
         <legend>Sign in</legend>
         <form class="form-control" method="post" action="registeruser.php">
             Full Name <br />
