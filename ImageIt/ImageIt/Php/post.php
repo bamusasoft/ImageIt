@@ -8,7 +8,8 @@
     <?php
     include("header.php");
         ?>
-    <div class="maincontent">
+    <div class="wrapper">
+     <div class="content">
     <?php 
     $postId= (int) $_GET["id"];
     if(!isset($postId))
@@ -62,6 +63,10 @@
         </textarea>
         <input type="submit" name="submit" value="Add" />
     </form>
+     </div>
+        <div id="footer">
+            <?php include("footer.php");?>
+        </div>
     </div>
 </body>
 </html>

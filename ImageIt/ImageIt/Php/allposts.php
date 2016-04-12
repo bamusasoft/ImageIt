@@ -8,32 +8,37 @@
     <?php
     include("header.php");
     ?>
-    <div class="maincontent">
-        <?php
-        require_once('connection.php');
-        $query = "Select * from posts";
-        $result = mysqli_query($connection, $query);
-        if(!$result)
-        {
-            die(mysqli_error($connection));
-        }
-        ?>
+    <div id="wapper">
+        <div id="content">
+            <?php
+            require_once('connection.php');
+            $query = "Select * from posts";
+            $result = mysqli_query($connection, $query);
+            if(!$result)
+            {
+                die(mysqli_error($connection));
+            }
+            ?>
 
-        <?php
-        while($row = mysqli_fetch_assoc($result))
-        {
-        ?>
+            <?php
+            while($row = mysqli_fetch_assoc($result))
+            {
+            ?>
 
-        <img src="<?php echo $row["ImageUrl"]; ?>" width="75" height="80" />
-        <br />
-        <a href="post.php?id=<?php echo $row["Id"]?>">
-            <?php echo $row["Title"]; ?>
-        </a>
-        <hr />
-        <?php
-        }
-        mysqli_close($connection);
-        ?>
+            <img src="<?php echo $row["ImageUrl"]; ?>" width="75" height="80" />
+            <br />
+            <a href="post.php?id=<?php echo $row["Id"]?>">
+                <?php echo $row["Title"]; ?>
+            </a>
+            <hr />
+            <?php
+            }
+            mysqli_close($connection);
+            ?>
+        </div>
+        <div id="footer">
+            <?php include("footer.php");?>
+        </div>
     </div>
 </body>
 </html>

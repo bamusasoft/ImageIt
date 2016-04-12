@@ -10,9 +10,9 @@
     session_start();
     $user = $_SESSION['SESS_USER'];
     ?>
-    <div>
+    <div id="header">
         <img src="../logo/logo.png" alt="Image It" width="75" height="80" />
-    </div>
+ 
     <div id="menu">
             <a class="menuItem" href="../home.php">Home</a>
             <a class="menuItem" href="../php/allposts.php">Posts</a>
@@ -34,6 +34,7 @@
         }
 
         ?>
+    </div>
     </div>
 </body>
 </html>

@@ -1,40 +1,95 @@
 ﻿body {
-    margin-bottom:10px;
-    margin-top:10px;
-    margin-left:50px;
-    margin-right:50px;
+    margin: 50px;
+}
 
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #2D2D2D;
 }
-#menu{
-     margin-top:550px;
-     display:inline;
+
+h2 {
+    padding: 0px 0px 30px 0px;
+    font-size: 2.50em;
 }
+
+p, ol, ul {
+    margin-top: 0px;
+}
+
+p {
+    line-height: 180%;
+}
+
+strong {
+}
+
+a {
+    color: rgba(0,0,0,.8);
+}
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    a img {
+        border: none;
+    }
+
+
+
+#header {
+    border: solid 2px red;
+    background: #efefef;
+}
+
+
 /*specific style for mean menu items, home, posts, about*/
-a.menuItem{
-    margin-right:15px;
-
-}
-.signin{
-    float:right;
+a.menuItem {
+    margin-right: 15px;
 }
 
+.signin {
+    float: right;
+}
+
 
 
 
-.maincontent{
-    margin-top:30px;
-}
-.extracontent{
-    margin-top:30px;
-}
-form{
-    margin:30px;
-}
-input[type=text]{
-    margin-bottom:15px;
-}
-input[type=text]:focus{
-    border-color:#333;
+#content {
+    border: solid 2px red;
+    margin-top: 30px;
 }
 
+#footer {
+    position: absolute;
+    right: 50px;
+    bottom: 0;
+    left: 50px;
+    background-color: #efefef;
+    text-align: center;
+    border: solid 1px red;
+    font-weight: bolder;
+}
+
+form {
+    margin: 30px;
+}
+
+input[type=text] {
+    margin-bottom: 15px;
+}
+
+    input[type=text]:focus {
+        border-color: #333;
+    }
+ul.footerList{
+    list-style-type:none;
+}
+li.footerElement{
+   
+    display:inline;
+}
 

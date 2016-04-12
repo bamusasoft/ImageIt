@@ -35,6 +35,7 @@
     <Compile Include="Php\addcomment.php" />
     <Compile Include="Php\allposts.php" />
     <Compile Include="Php\connection.php" />
+    <Compile Include="Php\footer.php" />
     <Compile Include="Php\header.php" />
     <Compile Include="Php\latestposts.php" />
     <Compile Include="Php\login.php" />
