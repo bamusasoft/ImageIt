@@ -28,6 +28,7 @@ if (isset($_POST["submit"]))
 
           //}
            $postId = mysqli_insert_id($connection);
+           mysqli_close($connection);
            header("location: post.php?id=" . $postId );
            exit();
 

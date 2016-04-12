@@ -33,8 +33,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Php\addcomment.php" />
+    <Compile Include="Php\allposts.php" />
     <Compile Include="Php\connection.php" />
+    <Compile Include="Php\header.php" />
+    <Compile Include="Php\latestposts.php" />
     <Compile Include="Php\login.php" />
+    <Compile Include="Php\logout.php" />
     <Compile Include="Php\postimage.php" />
     <Compile Include="Php\registeruser.php" />
     <Compile Include="Php\registration.php" />

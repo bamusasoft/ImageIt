@@ -4,51 +4,21 @@
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="../Style/MasterStyle.css" />
 </head>
-<?php
-session_start();
-$user = $_SESSION['SESS_USER'];
-    ?>
 <body>
-    <div id="logo">
-        <img src="../logo/logo.jpg" alt="Image It" width="75" height="50" />
-    </div>
-    <div id="header">
-        <div id="menu">
-            <a class="menuItem" href="home.php">Home</a>
-            <a class="menuItem" href="posts.php">Posts</a>
-            <a class="menuItem" href="about.php">About</a>
-        </div>
-        <?php
-            if(!isset($user))
-              {
-                  echo '<div id="signin">
-                    <a href="../Php/Login.php">Sign In </a>
-                    </div>
-                    ';
-              }
-              else
-              {
-                  echo '<div id="signin">
-                    <a href="../Php/Login.php">log out </a>
-                 </div>
-                    ';
-              }
-
-        ?>
-    </div>
-
+    <?php include("php/header.php"); ?>
     <div id="content">
-        <form method="post" action="../Php/postimage.php" enctype="multipart/form-data">
-            <label title="subject">Subject</label>
-            <input type="text" name="subject" />
-            <br />
-            <label title="image">Select Image</label>
-            <input type="file" name="imageToUpload" id="imageToUpload" />
-            <br />
+        <form  method="post" action="../Php/postimage.php" enctype="multipart/form-data">
+             Subject <br />
+            <input type="text" name="subject" size="40" placeholder="Enter short descriptive subject"/><br />
+             Select Image <br />
+            <input type="file" name="imageToUpload" id="imageToUpload" size="40"/><br />
             <input type="submit" value="Upload Image" name="submit" />
         </form>
     </div>
+    <div id="latestPosts">
+        <h2>Latest posts</h2><br />
+        <?php include("php/latestposts.php"); ?>
+    </div>
 
-    <div id="latestPosts"></div>
 </body>
 </html>

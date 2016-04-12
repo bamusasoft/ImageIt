@@ -6,7 +6,7 @@
 </head>
 <body>
     <?php
-    
+    include("header.php");
     $postId= (int) $_GET["id"];
     if(!isset($postId))
         {
@@ -30,27 +30,27 @@
                        {
                          $selectComment = "Select * from comments Where PostId = $postId";
                          $commentsResult = mysqli_query($connection, $selectComment);
-                         $postComments = mysqli_fetch_assoc($commentsResult);
-
-                         
                         }
                     $imageUrl = $post["ImageUrl"];
                     $title = $post["Title"]
                       ?>
                     <img src = "<?php echo $imageUrl ?>" width = "250" height = "150" > 
                     <h3> <?php echo $title ?> </h3>
-                    <span>Comments</span>
+                   <hr />
+                    <h2>Comments</h2>
                     <?php 
-                        foreach($postComments as $comment)
+                        while($row = mysqli_fetch_assoc($commentsResult))
                             {
                             
                         ?>
-                        <p> <?php $comment["Comment"]?></p>
+                        <p> <?php echo $row["Comment"]?></p>
+                        <hr />
                         <?php
                             }
                 }
             }
         ?>
+    <?php mysqli_close($connection); ?>
     <form method="post" action="addcomment.php">
         <input type="hidden" name="postId" value="<?php echo $postId?>" />
         <textarea rows="4" cols="50" name="comment" id="comment">

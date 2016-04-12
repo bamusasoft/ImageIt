@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="../Style/MasterStyle.css" />
 </head>
 <body>
+    <?php include("header.php") ?>
     <fieldset style="width:30%"> <legend>Sign in</legend>
         <form method="post" action="user.php">
             User name <br />

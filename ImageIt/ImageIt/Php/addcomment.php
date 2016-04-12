@@ -10,8 +10,10 @@ if(!isset($postId))
 require_once("connection.php");
 $comment = $_POST["comment"];
 $createdAt= date("Y-m-d H:i:s");
-$insertComment = "Insert into comments values($postId, $comment, $createdAt)";
+$insertStatm = "INSERT INTO comments (PostId, Comment, CreatedAt) VALUES(?, ?, ?)";
+$stmt =mysqli_prepare($connection, $insertStatm);
+mysqli_stmt_bind_param($stmt, "sss", $postId, $comment, $createdAt);
+$result = mysqli_stmt_execute($stmt);
 
-mysql_query($insertComment);
-header("location: post.php?id = " .$postId);
+header("location: post.php?id=".$postId);
 ?>
