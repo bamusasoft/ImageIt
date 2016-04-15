@@ -6,7 +6,9 @@
 </head>
 <body>
     <div id="wrapper">
-        <?php include("php/header.php"); ?>
+        <?php 
+		if(isset($_GET["submit"]))
+		include("php/header.php"); ?>
 
         <div id="content">
             <form method="post" action="../Php/postimage.php" enctype="multipart/form-data">
@@ -26,5 +28,6 @@
             <?php include("php/footer.php");?>
         </div>
     </div>
+	
 </body>
 </html>

@@ -7,7 +7,7 @@
         <ul class="footerList">
             <li class="footerElement">Abdullah BaMusa - </li>
             <li class="footerElement">Omar Amoudi - </li>
-            <li class="footerElement">Ahmed Hilal - </li>
+            <li class="footerElement">Ahmed Hillal - </li>
         </ul>
 </body>
 </html>
