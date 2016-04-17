@@ -65,7 +65,7 @@ a.menuItem {
 }
 
 #footer {
-    position: absolute;
+    position: fixed;
     right: 50px;
     bottom: 0;
     left: 50px;
