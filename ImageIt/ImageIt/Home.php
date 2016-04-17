@@ -11,9 +11,9 @@
         <div id="content">
             <form method="post" action="../Php/postimage.php" enctype="multipart/form-data">
                 Subject <br />
-                <input type="text" name="subject" size="40" placeholder="Enter short descriptive subject" /><br />
-                Select Image <br />
-                <input type="file" name="imageToUpload" id="imageToUpload" size="40" /><br />
+                <input type="text" name="subject" size="40" placeholder="Enter short descriptive subject" required/><br />
+                Select Image <br /> 
+                <input type="file" name="imageToUpload" id="imageToUpload" size="40" required /> <br /> 
                 <input type="submit" value="Upload Image" name="submit" />
             </form>
 

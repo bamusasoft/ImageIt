@@ -20,11 +20,11 @@ function validateForm() {
         <legend>Sign in</legend>
         <form name="registeration" class="form-control" onsubmit="return validateForm()" method="post" action="registeruser.php">
             Full Name <br />
-            <input type="text" name="username" size="40" /><br />
+            <input type="text" name="username" size="40"  required/><br />
             Email <br />
-            <input type="text" name="email" size="40" /><br />
+            <input type="text" name="email" size="40" required /><br />
             Password <br />
-            <input type="password" name="password" size="40" /><br />
+            <input type="password" name="password" size="40"  required/><br />
             <input id="button" type="submit" name="submit" value="Register" />
 
         </form>
