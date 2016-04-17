@@ -19,7 +19,7 @@
 
             <div class="extracontent">
                 <h2>Latest posts</h2><br />
-                <?php //include("php/latestposts.php"); ?>
+                <?php include("php/latestposts.php"); ?>
             </div>
         </div>
         <div id="footer">
