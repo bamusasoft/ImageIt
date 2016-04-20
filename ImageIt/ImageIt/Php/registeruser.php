@@ -21,7 +21,7 @@ if($result)
 }
 mysqli_stmt_close($stmt);
 mysqli_close($connection);
-header("location: ../home.php");
+header("location: ../index.php");
 exit();
 
 ?>

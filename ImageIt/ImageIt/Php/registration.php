@@ -15,7 +15,9 @@ function validateForm() {
 }
 </script>
 <body>
-
+    <?php include("header.php")?>
+    <div id="wrapper">
+    <div id="content">
     <fieldset class="maintcontent" style="width:30%">
         <legend>Sign in</legend>
         <form name="registeration" class="form-control" onsubmit="return validateForm()" method="post" action="registeruser.php">
@@ -29,5 +31,11 @@ function validateForm() {
 
         </form>
     </fieldset>
+        </div>
+        <div id="footer">
+            <?php include("footer.php")?>
+        </div>
+           </div>
+
 </body>
 </html>

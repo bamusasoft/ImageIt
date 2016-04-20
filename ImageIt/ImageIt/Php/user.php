@@ -18,7 +18,7 @@ if($resultCount > 0)
         $_SESSION['SESS_MEMBER_ID'] = $usersArray["Id"];
         $_SESSION['SESS_USER']= $usersArray["UserName"];
         session_write_close();
-        header("location: ../home.php");
+        header("location: ../index.php");
         exit();
 }
 

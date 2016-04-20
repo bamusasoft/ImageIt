@@ -9,7 +9,7 @@
     </RootNamespace>
     <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
     <AssemblyName>ImageIt</AssemblyName>
-    <SpecificPageValue>Home.php</SpecificPageValue>
+    <SpecificPageValue>index.php</SpecificPageValue>
     <StartAction>SpecificPage</StartAction>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -26,8 +26,9 @@
     <Folder Include="Php\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="home.php" />
+    <Content Include="index.php" />
     <Content Include="Logo\logo.PNG" />
+    <Content Include="Php\about.php" />
     <Content Include="Php\post.php" />
     <Content Include="Style\MasterStyle.css" />
   </ItemGroup>
