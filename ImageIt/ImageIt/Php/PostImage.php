@@ -1,5 +1,10 @@
 <?php
 session_start();
+$currentUser = $_SESSION["SESS_USER"];
+if(!isset($currentUser) || !empty($currentUser)){
+    header("location: ../Php/login.php");
+    exit();
+}
 $target_dir = "../Images/";
 
 $target_file = $target_dir . basename($_FILES["imageToUpload"]["name"]);

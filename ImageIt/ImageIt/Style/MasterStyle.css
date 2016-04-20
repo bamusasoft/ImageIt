@@ -38,44 +38,36 @@ a {
         border: none;
     }
 
-#header {
-    min-height:40px;
-    background-color: aliceblue ;
-
-}
-
-
-/*specific style for mean menu items, home, posts, about*/
-a.menuItem {
-    margin-right: 15px;
-}
+    /*specific style for mean menu items, home, posts, about*/
+    a.menuItem {
+        margin-right: 15px;
+    }
 
 .signin {
     float: right;
 }
 
+#header {
+    min-height: 40px;
+    background-color: aliceblue;
+}
+
 #content {
-   margin-top: 15px;
-   margin-bottom:30px;
-   background-color:lightcyan;
-   height:100%;
-   left:50px;
-   right:50px;
-   display:block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: lightcyan;
+    left: 50px;
+    right: 50px;
 }
 
 #footer {
-    display:block;
+    display: block;
     right: 150px;
     left: 50px;
     background-color: aliceblue;
     text-align: center;
     font-weight: bolder;
-    clear:both;
-}
-
-form {
-    margin: 30px;
+    clear: both;
 }
 
 input[type=text] {
@@ -85,16 +77,33 @@ input[type=text] {
     input[type=text]:focus {
         border-color: #333;
     }
-ul.footerList{
-    list-style-type:none;
-}
-li.footerElement{
-   
-    display:inline;
-}
-.extracontent{
-    border-top-style:solid;
-    border-top-width:3px;
-    border-top-color:darkred;
+
+input[type=submit] {
+    margin-top: 10px;
 }
 
+ul.footerList {
+    list-style-type: none;
+}
+
+li.footerElement {
+    display: inline;
+}
+
+.extracontent {
+    margin-top:15px;
+    border-top-style: solid;
+    border-top-width: 3px;
+    border-top-color: darkred;
+}
+#allpostsseparator{
+    margin-top:10px;
+    margin-bottom:10px;
+    border-bottom-style:solid;
+    border-bottom-width:2px;
+    border-bottom-color:black;
+}
+.allposts{
+    margin-left:15px;
+    margin-right:15px;
+}

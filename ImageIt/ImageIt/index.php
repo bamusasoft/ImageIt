@@ -6,7 +6,10 @@
 </head>
 <body>
     <div id="wrapper">
-        <?php include("php/header.php"); ?>
+        <div id="header">
+            <?php include("php/header.php"); ?>
+        </div>
+        
 
         <div id="content">
             <form method="post" action="../Php/postimage.php" enctype="multipart/form-data">

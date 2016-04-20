@@ -20,16 +20,18 @@
     while($row = mysqli_fetch_assoc($result))
     {
     ?>
-
+    <div class="allposts">
     <img src="<?php echo $row["ImageUrl"]; ?>" alt="Posted Image" width="75" height="80" />
     <br />
     <a href="php/post.php?id=<?php echo $row["Id"];?>">
         <?php echo $row["Title"];?>
     </a>
-    <hr />
+        </div>
+    <div id="allpostsseparator"></div>
     <?php
     }
     ?>
     <?php mysqli_close($connection); ?>
+
 </body>
 </html>

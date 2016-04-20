@@ -13,7 +13,6 @@
     <div id="logo">
         <img src="../logo/logo.png" alt="Image It" width="75" height="80" />
     </div>
-    <div id="header">
     <div id="menu">
             <a class="menuItem" href="../index.php">Home</a>
             <a class="menuItem" href="../php/allposts.php">Posts</a>
@@ -35,7 +34,6 @@
         }
 
         ?>
-    </div>
     </div>
 </body>
 </html>
