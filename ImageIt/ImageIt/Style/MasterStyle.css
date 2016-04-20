@@ -49,13 +49,13 @@ a {
 
 #header {
     min-height: 40px;
-    background-color: silver;
+    background-color: #E97087;
 }
 
 #content {
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: lightcyan;
+    background-color: #E2D8B0;
     left: 50px;
     right: 50px;
 }
@@ -64,7 +64,7 @@ a {
     display: block;
     right: 150px;
     left: 50px;
-    background-color: aliceblue;
+    background-color: #62AA8E;
     text-align: center;
     font-weight: bolder;
     clear: both;
