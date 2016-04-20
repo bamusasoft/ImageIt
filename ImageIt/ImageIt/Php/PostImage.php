@@ -1,7 +1,7 @@
 <?php
 session_start();
 $currentUser = $_SESSION["SESS_USER"];
-if(!isset($currentUser) || !empty($currentUser)){
+if(!isset($currentUser) || empty($currentUser)){
     header("location: ../Php/login.php");
     exit();
 }
