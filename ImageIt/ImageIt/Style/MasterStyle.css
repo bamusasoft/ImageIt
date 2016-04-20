@@ -1,6 +1,5 @@
 ﻿body {
     margin: 50px;
-	background-color: Green;
 }
 
 h1, h2, h3 {
@@ -39,11 +38,10 @@ a {
         border: none;
     }
 
-
-
 #header {
-    border: solid 2px red;
-    background: #efefef;
+    min-height:40px;
+    background-color: aliceblue ;
+
 }
 
 
@@ -56,23 +54,24 @@ a.menuItem {
     float: right;
 }
 
-
-
-
 #content {
-    border: solid 2px red;
-    margin-top: 30px;
+   margin-top: 15px;
+   margin-bottom:30px;
+   background-color:lightcyan;
+   height:100%;
+   left:50px;
+   right:50px;
+   display:block;
 }
 
 #footer {
-    position: absolute;
-    right: 50px;
-    bottom: 0;
+    display:block;
+    right: 150px;
     left: 50px;
-    background-color: #efefef;
+    background-color: aliceblue;
     text-align: center;
-    border: solid 1px red;
     font-weight: bolder;
+    clear:both;
 }
 
 form {
@@ -92,5 +91,10 @@ ul.footerList{
 li.footerElement{
    
     display:inline;
+}
+.extracontent{
+    border-top-style:solid;
+    border-top-width:3px;
+    border-top-color:darkred;
 }
 

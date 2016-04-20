@@ -15,11 +15,11 @@
                 <form method="post" action="user.php">
                     User name
                     <br />
-                    <input type="text" name="username" size="40" />
+                    <input type="text" name="username" size="40" required/>
                     <br />
                     Password
                     <br />
-                    <input type="password" name="password" size="40" />
+                    <input type="password" name="password" size="40" required />
                     <br />
                     <input id="button" type="submit" name="submit" value="Sign in" />
                     New?

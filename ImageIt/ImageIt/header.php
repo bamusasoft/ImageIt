@@ -10,10 +10,9 @@
     session_start();
     $user = $_SESSION['SESS_USER'];
     ?>
-    <div id="logo">
-        <img src="../logo/logo.png" alt="Image It" width="75" height="80" />
-    </div>
     <div id="header">
+        <img src="../logo/logo.png" alt="Image It" width="75" height="80" />
+ 
     <div id="menu">
             <a class="menuItem" href="../index.php">Home</a>
             <a class="menuItem" href="../php/allposts.php">Posts</a>
