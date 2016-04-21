@@ -5,66 +5,69 @@
     <link rel="stylesheet" type="text/css" href="../Style/MasterStyle.css" />
 </head>
 <body>
-    <?php
 
-    include("header.php");
-        ?>
-    <div class="wrapper">
-     <div class="content">
-    <?php 
-    $postId= (int) $_GET["id"];
-    if(!isset($postId))
-        {
-            exit();
-        }
-
-    require_once('connection.php');
-    $query = "Select * from posts where Id = $postId";
-    $result = mysqli_query($connection, $query);
-    if(!$result)
-    {
-        die(mysqli_error($connection));
-    }
-    if($result)
-        {
-            if(mysqli_num_rows($result) > 0)
+    <div id="wrapper">
+        <div id="header">
+            <?php include("../php/header.php") ?>
+        </div>
+        <div id="content">
+            <?php
+            $postId= (int) $_GET["id"];
+            if(!isset($postId))
+            {
+                exit();
+            }
+            require_once('connection.php');
+            $query = "Select * from posts where Id = $postId";
+            $result = mysqli_query($connection, $query);
+            if(!$result)
+            {
+                die(mysqli_error($connection));
+            }
+            if($result)
+            {
+                if(mysqli_num_rows($result) > 0)
                 {
                     $post = mysqli_fetch_assoc($result);
                     $postId= (int) $post["Id"];
                     $postComments = null;
                     if(isset($postId))
-                       {
-                         $selectComment = "Select * from comments Where PostId = $postId";
-                         $commentsResult = mysqli_query($connection, $selectComment);
-                        }
+                    {
+                        $selectComment = "Select * from comments Where PostId = $postId";
+                        $commentsResult = mysqli_query($connection, $selectComment);
+                    }
                     $imageUrl = $post["ImageUrl"];
                     $title = $post["Title"]
-                      ?>
-                    <img src = "<?php echo $imageUrl ?>" width = "250" height = "150" > 
-                    <h3> <?php echo $title ?> </h3>
-                   <hr />
-                    <h2>Comments</h2>
-                    <?php 
-                        while($row = mysqli_fetch_assoc($commentsResult))
-                            {
-                            
-                        ?>
-                        <p> <?php echo $row["Comment"]?></p>
-                        <hr />
-                        <?php
-                            }
+            ?>
+            <div id="displayedpost">
+                <img src="<?php echo $imageUrl ?>" width="250" height="150" />
+                <P>
+                    <?php echo $title ?>
+                </P>
+            </div>
+            <hr />
+            <h2>Comments</h2>
+            <?php
+                    while($row = mysqli_fetch_assoc($commentsResult))
+                    {
+            ?>
+            <p>
+                <?php echo $row["Comment"]?>
+            </p>
+            <hr />
+            <?php
+                    }
                 }
             }
-        ?>
-    <?php mysqli_close($connection); ?>
+            ?>
+            <?php mysqli_close($connection); ?>
 
-    <form method="post" action="addcomment.php">
-        <input type="hidden" name="postId" value="<?php echo $postId?>" />
-        <textarea rows="4" cols="50" name="comment" id="comment">
-        </textarea>
-        <input type="submit" name="submit" value="Add" />
-    </form>
-     </div>
+            <form method="post" action="addcomment.php">
+                <input type="hidden" name="postId" value="<?php echo $postId?>" />
+                <textarea rows="4" cols="50" name="comment" id="comment"></textarea><br />
+                <input type="submit" name="submit" value="Add Comment" />
+            </form>
+        </div>
         <div id="footer">
             <?php include("footer.php");?>
         </div>

@@ -15,7 +15,9 @@ function validateForm() {
 }
 </script>
 <body>
-    <?php include("header.php")?>
+    <div id="header">
+        <?php include("../php/header.php") ?>
+    </div>
     <div id="wrapper">
     <div id="content">
     <fieldset class="maintcontent" style="width:30%">

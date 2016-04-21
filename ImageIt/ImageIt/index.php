@@ -21,7 +21,7 @@
             </form>
 
             <div class="extracontent">
-                <h2>Latest posts</h2><br />
+                <h2 class="mainheader">Latest posts</h2><br />
                 <?php include("php/latestposts.php"); ?>
             </div>
         </div>

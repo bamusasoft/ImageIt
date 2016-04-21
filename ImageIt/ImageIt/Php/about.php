@@ -5,7 +5,9 @@
 </head>
 <body>
 <div id="wrapper">
-    <?php include("../php/header.php") ?>
+        <div id="header">
+            <?php include("../php/header.php") ?>
+        </div>
 <div id="content" >
     <p style="text-align:justify; font-size:x-large;" >
         Image it® <br />
