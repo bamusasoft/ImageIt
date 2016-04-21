@@ -1,6 +1,68 @@
 ﻿body {
     margin: 50px;
 }
+.signin {
+    float: right;
+}
+
+#header {
+    min-height: 40px;
+    background-color: lightgray;
+    padding-top:5px;
+    padding-bottom:15px;
+}
+
+#content {
+    border-top-color:silver;
+    border-top-style:groove;
+    border-top-width:2px;
+    border-bottom-color:silver;
+    border-bottom-style:groove;
+    border-bottom-width:2px;
+    background-color: #E2D8B0;
+    padding-top:15px;
+    padding-bottom:10px;
+    padding-left:10px;
+    padding-right:10px;
+    left: 50px;
+    right: 50px;
+}
+
+#footer {
+    display: block;
+    right: 150px;
+    left: 50px;
+    background-color: #62AA8E;
+    text-align: center;
+    font-weight: bolder;
+    clear: both;
+    padding-top:15px;
+}
+
+.extracontent {
+    margin-top:15px;
+    border-top-style: solid;
+    border-top-width: 3px;
+    border-top-color: darkred;
+}
+#allpostsseparator{
+    margin-top:10px;
+    margin-bottom:10px;
+    border-bottom-style:solid;
+    border-bottom-width:2px;
+    border-bottom-color:black;
+}
+#displayedpost{
+   text-align:center;
+}
+.allposts{
+    margin-left:15px;
+    margin-right:15px;
+}
+.mainheader{
+    padding-top:10px;
+    padding-left:15px;
+}
 
 h1, h2, h3 {
     margin: 0;
@@ -9,6 +71,7 @@ h1, h2, h3 {
     font-weight: 300;
     color: #2D2D2D;
 }
+
 
 h2 {
     padding: 0px 0px 30px 0px;
@@ -43,32 +106,7 @@ a {
         margin-right: 15px;
     }
 
-.signin {
-    float: right;
-}
 
-#header {
-    min-height: 40px;
-    background-color: coral;
-}
-
-#content {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: #E2D8B0;
-    left: 50px;
-    right: 50px;
-}
-
-#footer {
-    display: block;
-    right: 150px;
-    left: 50px;
-    background-color: #62AA8E;
-    text-align: center;
-    font-weight: bolder;
-    clear: both;
-}
 
 input[type=text] {
     margin-bottom: 15px;
@@ -90,20 +128,4 @@ li.footerElement {
     display: inline;
 }
 
-.extracontent {
-    margin-top:15px;
-    border-top-style: solid;
-    border-top-width: 3px;
-    border-top-color: darkred;
-}
-#allpostsseparator{
-    margin-top:10px;
-    margin-bottom:10px;
-    border-bottom-style:solid;
-    border-bottom-width:2px;
-    border-bottom-color:black;
-}
-.allposts{
-    margin-left:15px;
-    margin-right:15px;
-}
+

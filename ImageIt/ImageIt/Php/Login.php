@@ -6,16 +6,18 @@
     <link rel="stylesheet" type="text/css" href="../Style/MasterStyle.css" />
 </head>
 <body>
-    <?php include("header.php") ?>
+    <div id="header">
+        <?php include("../php/header.php") ?>
+    </div>
 
     <div id="warpper">
         <div id="content">
             <fieldset class="maincontent" style="width:30%">
                 <legend>Sign in</legend>
                 <form method="post" action="user.php">
-                    User name
+                    Email
                     <br />
-                    <input type="text" name="username" size="40" required/>
+                    <input type="text" name="username" size="40" required />
                     <br />
                     Password
                     <br />

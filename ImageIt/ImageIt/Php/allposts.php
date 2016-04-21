@@ -5,9 +5,10 @@
     <link rel="stylesheet" type="text/css" href="../Style/MasterStyle.css" />
 </head>
 <body>
-    <?php
-    include("header.php");
-    ?>
+    <div id="header">
+        <?php include("../php/header.php") ?>
+    </div>
+   
     <div id="wapper">
         <div id="content">
             <?php

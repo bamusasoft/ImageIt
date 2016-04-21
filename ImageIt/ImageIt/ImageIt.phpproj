@@ -27,7 +27,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.php" />
-    <Content Include="Logo\logo.PNG" />
+    <Content Include="Logo\logo.png" />
     <Content Include="Php\about.php" />
     <Content Include="Php\post.php" />
     <Content Include="Style\MasterStyle.css" />
