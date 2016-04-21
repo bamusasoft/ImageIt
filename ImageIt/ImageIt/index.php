@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Home</title>
+    <title>ImageIt Home page</title>
     <link rel="stylesheet" type="text/css" href="../Style/MasterStyle.css" />
 </head>
 <body>
+    <script>
+        window.alert("Welcome to Imageit website");
+    </script>
     <div id="wrapper">
         <div id="header">
             <?php include("php/header.php"); ?>
