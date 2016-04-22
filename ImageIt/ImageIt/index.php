@@ -5,9 +5,7 @@
     <link rel="stylesheet" type="text/css" href="../Style/MasterStyle.css" />
 </head>
 <body>
-    <script>
-        window.alert("Welcome to Imageit website");
-    </script>
+   
     <div id="wrapper">
         <div id="header">
             <?php include("php/header.php"); ?>
@@ -16,8 +14,8 @@
 
         <div id="content">
             <form method="post" action="../Php/postimage.php" enctype="multipart/form-data">
-                Subject <br />
-                <input type="text" name="subject" size="40" placeholder="Enter short descriptive subject" required/><br />
+                Question <br />
+                <input type="text" name="subject" size="40" placeholder="Enter short descriptive question" required/><br />
                 Select Image <br /> 
                 <input type="file" name="imageToUpload" id="imageToUpload" size="40" required /> <br /> 
                 <input type="submit" value="Upload Image" name="submit" />
